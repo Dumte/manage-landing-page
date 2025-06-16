@@ -1,13 +1,20 @@
 const Footer = () => {
   return (
     <footer className="bg-veryDarkBlue">
-      <div className="container mx-auto py-10 px-6 flex justify-between space-y-8 flex-col-reverse md:space-y-0 md:flex-row">
-        <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
+      {/* Flex Container */}
+      <div className="container mx-auto py-10 px-6 flex justify-between md:space-x-0 space-y-8 flex-col-reverse md:space-y-0 md:flex-row">
+        {/* Logo and Social Links Container */}
+        <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-6 md:items-start md:w-1/3">
+          <div className="mx-auto md:text-sm my-6 text-center text-white md:hidden">
+            Copyright &copy; 2022. All Rights Reserved.
+          </div>
+          {/* Logo */}
           <div>
             <img src="./logo.svg" alt="manage logo" className="h-8" />
           </div>
 
-          <div className="flex justify-center space-x-4">
+          {/* Social Links Container */}
+          <div className="flex  my-6 space-x-4">
             <a href="#">
               <img
                 src="./icon-facebook.svg"
@@ -45,15 +52,54 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
         {/* List Container */}
-        <div className="flex justify-around space-x-32">
-            <div className="flex flex-col space-y-3 text-white">
-                <a href="#" className="hover:text-brightRed">Home</a>
-                <a href="#" className="hover:text-brightRed">Pricing</a>
-                <a href="#" className="hover:text-brightRed">Products</a>
-                <a href="#" className="hover:text-brightRed">About</a>
+        <div className="flex justify-around space-x-8 md:w-1/3">
+          <div className="flex flex-col space-y-3 text-white">
+            <a href="#" className="hover:text-brightRed">
+              Home
+            </a>
+            <a href="#" className="hover:text-brightRed">
+              Pricing
+            </a>
+            <a href="#" className="hover:text-brightRed">
+              Products
+            </a>
+            <a href="#" className="hover:text-brightRed">
+              About
+            </a>
+          </div>
+          <div className="flex flex-col space-y-3 text-white">
+            <a href="#" className="hover:text-brightRed">
+              Careers
+            </a>
+            <a href="#" className="hover:text-brightRed">
+              Community
+            </a>
+            <a href="#" className="hover:text-brightRed">
+              Privacy Policy
+            </a>
+          </div>
+        </div>
+
+        {/* Input Container */}
+        <div className="flex flex-col justify-between md:w-1/3">
+          <form>
+            <div className="flex space-x-3">
+              <input
+                type="text"
+                className="rounded-full focus:outline-none flex-1 px-4 bg-white"
+                placeholder="Updated in your inbox"
+              />
+              <button className="bg-brightRed py-2 px-6 hover:bg-brightRedLight focus:outline-none text-white rounded-full">
+                Go
+              </button>
             </div>
+          </form>
+
+          <div className="hidden md:block text-white md:text-right">
+            Copyright &copy; 2022. All Rights Reserved.
+          </div>
         </div>
       </div>
     </footer>

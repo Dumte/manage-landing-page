@@ -16,6 +16,9 @@ const Cta = () => {
         </div>
       </div>
     </section>
+
+    // Footer
+    
   );
 }
 
