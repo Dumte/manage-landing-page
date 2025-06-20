@@ -1,9 +1,16 @@
+import { useState } from "react";
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="relative p-6 container mx-auto">
+    <nav className="relative p-6 container mx-auto">
       <div className="flex items-center justify-between">
         <div className="pt-2 cursor-pointer">
-          <img src="./logo.svg" alt="Logo" />
+          <img src="/logo.svg" alt="Logo" />
         </div>
 
         <div className="hidden md:flex space-x-3">
@@ -33,15 +40,37 @@ const Navbar = () => {
 
         {/* The Hamburger Menu Icon */}
         <button
+          onClick={handleClick}
           id="menu-btn"
-          className="block hamburger md:hidden focus:outline-none"
+          className={`${
+            isOpen ? "open" : ""
+          } block hamburger md:hidden focus:outline-none`}
         >
-          <span className="hamburger-top"></span>
-          <span className="hamburger-middle"></span>
-          <span className="hamburger-bottom"></span>
+          <img
+            src={isOpen ? "/icon-close.svg" : "/icon-hamburger.svg"}
+            alt=""
+          />
         </button>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      <div className="md:hidden">
+        <div
+          id="menu"
+          className={`${
+            isOpen
+              ? "max-h-96 opacity-100 translate-y-0 flex"
+              : "max-h-0 opacity-0 -translate-y-2 hidden"
+          } absolute flex-col items-center self-end space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 py-8 mt-3 drop-shadow-md transition-all duration-500 ease-in-out transform overflow-hidden `}
+        >
+          <a href="#" className="py-2 hover:bg-brightRedLight w-full text-center">Pricing</a>
+          <a href="#" className="py-2 hover:bg-brightRedLight w-full text-center">Product</a>
+          <a href="#" className="py-2 hover:bg-brightRedLight w-full text-center">About Us</a>
+          <a href="#" className="py-2 hover:bg-brightRedLight w-full text-center">Careers</a>
+          <a href="#" className="py-2 hover:bg-brightRedLight w-full text-center">Community</a>
+        </div>
+      </div>
+    </nav>
   );
 };
 

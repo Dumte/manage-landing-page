@@ -14,48 +14,48 @@ const Footer = () => {
           </div>
 
           {/* Social Links Container */}
-          <div className="flex  my-6 space-x-4">
+          <div className="flex my-6 space-x-2">
             <a href="#">
               <img
                 src="./icon-facebook.svg"
                 alt="facebook-icon"
-                className="h-8"
+                className="h-7"
               />
             </a>
             <a href="#">
               <img
                 src="./icon-youtube.svg"
                 alt="youtube-icon"
-                className="h-8"
+                className="h-7"
               />
             </a>
             <a href="#">
               <img
                 src="./icon-twitter.svg"
                 alt="twitter-icon"
-                className="h-8"
+                className="h-7"
               />
             </a>
             <a href="#">
               <img
                 src="./icon-pinterest.svg"
                 alt="pinterest-icon"
-                className="h-8"
+                className="h-7"
               />
             </a>
             <a href="#">
               <img
                 src="./icon-instagram.svg"
                 alt="instagram-icon"
-                className="h-8"
+                className="h-7"
               />
             </a>
           </div>
         </div>
 
         {/* List Container */}
-        <div className="flex justify-around space-x-8 md:w-1/3">
-          <div className="flex flex-col space-y-3 text-white">
+        <div className="flex justify-around mt-8 md:mt-0 space-x-8 md:w-1/3 ">
+          <div className="flex flex-col space-y-3  text-white">
             <a href="#" className="hover:text-brightRed">
               Home
             </a>
