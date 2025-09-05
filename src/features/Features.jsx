@@ -4,7 +4,7 @@ const Features = () => {
       <div className="container mx-auto px-4 flex flex-col space-y-12 md:space-y-0 md:flex-row mt-10">
         <div className="flex flex-col space-y-12 md:w-1/2">
           <h2 className="font-bold text-4xl max-w-md text-center md:text-left">
-            Wht's different about Manage?
+            What's different about Manage?
           </h2>
           <p className="text-darkGrayishBlue max-w-sm text-center md:text-left">
             Manage provides all the functionality your team needs, without the
